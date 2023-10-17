@@ -60,4 +60,50 @@
     equivalent systems can do so!}
 \stopitemize
 
+\subject{The Solution}
+
+First let us solve the problem for $\alpha=\alpha_0$
+and~$\beta=\beta_0=0$. We will use~$\beta_0$ as an {\em angular
+  origin}. Then
+\startformula
+  \startmathalignment [n=2, align={right,left}]
+    \NC\cos^2\alpha\NC=\cos^2\alpha_0 \NR
+    \NC\sin^2\alpha\NC=\sin^2\alpha_0 \NR
+    \NC\cos^2\beta\NC= 1 \NR
+    \NC\sin^2\beta\NC= 0 \NR
+  \stopmathalignment
+\stopformula
+The choice of markings as $\{+1,-1\}$ makes the correlation
+coefficient simple to compute. It is
+\startformula
+\rho_0=\rho_0^{++}+\rho_0^{+-}+\rho_0^{-+}+\rho_0^{--}
+\stopformula
+where
+\startformula
+  \startmathalignment [n=2, align={right,left}]
+    % The roll for Bob always succeeds for Chocolate, always fails for
+    % Vanilla.
+    \NC\rho_0^{++}\NC=\frac{1}{2}(+1)(+1)\sin^2\alpha_0\NR % Vanilla/Choc
+    \NC\rho_0^{+-}\NC=\frac{1}{2}(+1)(-1)\cos^2\alpha_0\NR % Choc/Vanilla
+    \NC\rho_0^{-+}\NC=\frac{1}{2}(-1)(+1)\cos^2\alpha_0\NR % Vanilla/Choc
+    \NC\rho_0^{--}\NC=\frac{1}{2}(-1)(-1)\sin^2\alpha_0\NR % Choc/Vanilla
+  \stopmathalignment
+\stopformula
+Thus (by a double-angle identity found in reference books)
+\startformula
+  \rho_0=-(\cos^2\alpha_0-\sin^2\alpha_0)=-\cos(2\alpha_0)
+\stopformula
+Let~$\alpha=\alpha_0+\beta$. Then~$\rho_0$ is the desired solution, so
+rename it~$\rho$ without the subscript:
+\startformula
+  \rho=-\cos\{2(\alpha-\beta)\}
+\stopformula
+Although the particular arrangement of~$+1$ and~$-1$ marks depends on
+the specific values of~$\alpha$ and~$\beta$, the correlation
+coefficient depends only on their difference.\footnote{This solution
+  is the same as the one from quantum mechanics. Presumably some
+  physicists would Gish Gallop a lot of objections to my
+  solution. Such persons are allowed to teach classes?} Of course the
+corresponding fact was always true of Bell test experiments.
+
 \stoptext
