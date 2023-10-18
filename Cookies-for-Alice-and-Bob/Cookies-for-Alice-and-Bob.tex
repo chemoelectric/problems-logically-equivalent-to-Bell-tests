@@ -98,18 +98,16 @@
 
 \subject{The Solution}
 
-First let us solve the problem for $\alpha=\alpha_0$
-and~$\beta=\beta_0=0$. For this particular case we have
+First let us solve the problem for $\alpha_0=\alpha-\beta$
+and~$\beta_0=0$. Then
 \startformula
   \startmathalignment [n=2, align={right,left}]
-    \NC\cos^2\alpha\NC=\cos^2\alpha_0 \NR
-    \NC\sin^2\alpha\NC=\sin^2\alpha_0 \NR
-    \NC\cos^2\beta\NC= 1 \NR
-    \NC\sin^2\beta\NC= 0 \NR
+    \NC\cos^2\beta_0\NC= 1 \NR
+    \NC\sin^2\beta_0\NC= 0 \NR
   \stopmathalignment
 \stopformula
-The choice of markings as $\{+1,-1\}$ makes the correlation
-coefficient simple to compute. It is
+which simplifies things. The choice of markings as $\{+1,-1\}$ makes
+the correlation coefficient even simpler to compute. It is
 \startformula
 \rho_0=\rho_0^{++}+\rho_0^{+-}+\rho_0^{-+}+\rho_0^{--}
 \stopformula
@@ -128,21 +126,22 @@ Thus (by a double-angle identity found in reference books)
 \startformula
   \rho_0=-(\cos^2\alpha_0-\sin^2\alpha_0)=-\cos\,2\alpha_0
 \stopformula
-Let~$\alpha=\alpha_0+\beta$. Then~$\beta=\beta_0+\beta$, so~$\beta$ is
-a change of angular coordinates. Now~$\rho_0$ is the desired solution,
-so rename it~$\rho$ without the subscript. The solution is
+But~$\alpha_0=\alpha-\beta$, so~$\rho_0$ is the desired
+solution.\footnote{This solution is the same as the one from quantum
+  mechanics. But be forewarned: there are many ‘doctors of philosophy’
+  who would object to my solution yet are permitted to teach
+  university classes.}  Rename it~$\rho$ without the subscript. The
+solution is
 \startformula
   \rho=-\cos\,2(\alpha-\beta)
 \stopformula
-Although the particular ‘scattering’ of~$+1$ and~$-1$ marks (were a
-person to do the operation many times) depends on the specific values
-of~$\alpha$ and~$\beta$, the correlation coefficient depends only on
-the difference~$\alpha-\beta$. There is a relationship between~$+1$
-and~$-1$ marks that is invariant under in-unison rotation of the
-angles.\footnote{This solution is the same as the one from quantum
-  mechanics. Of course, the same rotational invariance was always true
-  of Bell test experiments, but little remarked on. But be forewarned:
-  there are many ‘doctors of philosophy’ who would object to my
-  solution yet are permitted to teach university classes.}~$\square$
+Interestingly, although the particular ‘scattering’ of~$+1$ and~$-1$
+marks (were a person to do the operation many times) depends on the
+specific values of~$\alpha$ and~$\beta$, the correlation coefficient
+depends only on the difference~$\alpha-\beta$. That is, there exists a
+relationship between~$+1$ and~$-1$ marks that is invariant under
+in-unison rotation of the angles.\footnote{Of course, the same rotational
+  invariance was always true of Bell test experiments, but little
+  remarked on.}~$\square$
 
 \stoptext
