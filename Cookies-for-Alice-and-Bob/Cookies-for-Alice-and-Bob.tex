@@ -7,20 +7,26 @@
 \setupbodyfont[schoolbook, 11pt]
 \setupbodyfontenvironment[default][em=italic]
 
-\definepapersize[Cookies][letter]
-\setuppapersize[Cookies][letter]
-\setuplayout[
-  location=singlesided,
-  backspace=1.25in,
-  width=fit,
-  grid=yes
-]
+\setuppapersize[letter][letter]
 
-\setuppagenumbering[
-  alternative=singlesided,
-  location={footer, middle},
-  way=bytext
-]
+\setuplayout
+  [location=singlesided,
+    width=fit,
+    backspace=1.25in]
+
+\setuppagenumbering
+  [alternative=singlesided,
+    location={footer, middle},
+    way=bytext]
+
+\setuphead
+  [title]
+  [align=middle]
+\setuphead
+  [subject]
+  [align=middle,
+    commandbefore={---\hskip0.6em},
+    commandafter={\hskip0.5em---}]
 
 \starttext
 
@@ -60,17 +66,17 @@
   box. Otherwise you write~$-1$.
 \item Calculate the correlation coefficient of the numbers written on
   the cookie boxes, as a function of~$\alpha-\beta$.\footnote{The
-    answer from quantum mechanics is~$-\cos\{2(\alpha-\beta)\}$, and
+    answer from quantum mechanics is~$-\!\cos\,2(\alpha-\beta)$, and
     physicists assure us only quantum mechanical systems can achieve
-    this correlation. According to physicists, not even logically
-    equivalent systems can do so!}
+    this solution. According to physicists, even logically equivalent
+    systems cannot do so, because they have no entangled superposition
+    states nor action at a distance!}
 \stopitemize
 
 \subject{The Solution}
 
 First let us solve the problem for $\alpha=\alpha_0$
-and~$\beta=\beta_0=0$. We will use~$\beta_0$ as an {\em angular
-  origin}. Then
+and~$\beta=\beta_0=0$. For this particular case we have
 \startformula
   \startmathalignment [n=2, align={right,left}]
     \NC\cos^2\alpha\NC=\cos^2\alpha_0 \NR
@@ -97,19 +103,23 @@ where
 \stopformula
 Thus (by a double-angle identity found in reference books)
 \startformula
-  \rho_0=-(\cos^2\alpha_0-\sin^2\alpha_0)=-\cos(2\alpha_0)
+  \rho_0=-(\cos^2\alpha_0-\sin^2\alpha_0)=-\cos\,2\alpha_0
 \stopformula
-Let~$\alpha=\alpha_0+\beta$. Then~$\rho_0$ is the desired solution, so
-rename it~$\rho$ without the subscript:
+Let~$\alpha=\alpha_0+\beta$. Then~$\beta=\beta_0+\beta$, so~$\beta$ is
+a change of angular coordinates. Now~$\rho_0$ is the desired solution,
+so rename it~$\rho$ without the subscript. The solution is
 \startformula
-  \rho=-\cos\{2(\alpha-\beta)\}
+  \rho=-\cos\,2(\alpha-\beta)
 \stopformula
-Although the particular arrangement of~$+1$ and~$-1$ marks depends on
-the specific values of~$\alpha$ and~$\beta$, the correlation
-coefficient depends only on their difference.\footnote{This solution
-  is the same as the one from quantum mechanics. Presumably some
-  physicists would Gish Gallop a lot of objections to my
-  solution. Such persons are allowed to teach classes?} Of course the
-corresponding fact was always true of Bell test experiments.
+Although the particular ‘scattering’ of~$+1$ and~$-1$ marks (were a
+person to do the operation many times) depends on the specific values
+of~$\alpha$ and~$\beta$, the correlation coefficient depends only on
+the difference~$\alpha-\beta$. There is a relationship between~$+1$
+and~$-1$ marks that is invariant under in-unison rotation of the
+angles.\footnote{This solution is the same as the one from quantum
+  mechanics. Of course, the same rotational invariance was always true
+  of Bell test experiments, but little remarked on. But be forewarned:
+  there are many ‘doctors of philosophy’ who would object to my
+  solution yet are permitted to teach university classes.}~$\square$
 
 \stoptext
