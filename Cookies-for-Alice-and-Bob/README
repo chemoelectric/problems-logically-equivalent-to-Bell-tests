@@ -1,5 +1,6 @@
 A little word problem, involving cookies and cosines, that is
-equivalent to a two-channel Bell test experiment with photons.
+equivalent to a two-channel Bell test experiment with photons. A
+solution is included.
 
 Available as any of
 
@@ -8,3 +9,7 @@ Available as any of
   * ConTeXt source
 
 and released into the public domain.
+
+(Because the solution doubles as a classical solution of the Bell test
+experiment, agreement that the solution is valid will make you
+ineligible for the Nobel Prize in Physics.)
