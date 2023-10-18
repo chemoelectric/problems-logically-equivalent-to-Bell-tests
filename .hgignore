@@ -1,0 +1,12 @@
+syntax: regexp
+
+# Backup files.
+~$
+\.orig$
+
+# Files made by ConTeXt.
+\.log$
+\.tuc$
+
+# Other files.
+-tmp-[0-9]+\.png$
