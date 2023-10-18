@@ -4,20 +4,27 @@
 \frenchspacing
 \mainlanguage[en]
 
-\setupbodyfont[schoolbook, 12pt]
+\setupbodyfont[schoolbook, 11pt]
 \setupbodyfontenvironment[default][em=italic]
 
 \definepapersize[Cookies][letter]
 \setuppapersize[Cookies][letter]
 \setuplayout[
   location=singlesided,
+  backspace=1.25in,
   width=fit,
-  margindistance=0in, margin=1in,
-  edgedistance=0in, edge=0in,
   grid=yes
 ]
 
+\setuppagenumbering[
+  alternative=singlesided,
+  location={footer, middle},
+  way=bytext
+]
+
 \starttext
+
+\title{Cookies for Alice and Bob}
 
 \subject{The Problem}
 
@@ -30,27 +37,26 @@
   is equivalent to a light source generating a pair of perpendicularly
   polarized photons.}
 \item Alice has a favorite angle,~$\alpha$. Bob also has a favorite
-  angle,~$\beta$. You write down the numbers $100\times\cos^2\alpha$,
-  $100\times\sin^2\alpha$, $100\times\cos^2\beta$,
-  and~$100\times\sin^2\beta$. Also, you have a pair of ten-sided
-  dice. You can roll these dice to get a number between zero and
-  ninety-nine.
+  angle,~$\beta$. You write down the numbers $\cos^2\alpha$,
+  $\sin^2\alpha$, $\cos^2\beta$, and~$\sin^2\beta$. Also, you have a
+  pair of ten-sided dice. You can roll these dice to get a number
+  between~$0.00$ and~$0.99$, inclusive.
 \item Suppose Alice is getting the box of Chocolate Cookies. You roll
   the dice. If the number you roll is less than
-  $100\times\cos^2\alpha$, then you write~$+1$ on the box. Otherwise
+  $\cos^2\alpha$, then you write~$+1$ on the box. Otherwise
   you write~$-1$.\footnote{This is equivalent to a photon being
     detected in one of the channels of a polarizing beam splitter.}
 \item Suppose, on the other hand, that Alice is getting the box of
   Vanilla Cookies. You roll the dice.  If the number you roll is less
-  than $100\times\sin^2\alpha$, then you write~$+1$ on the
+  than $\sin^2\alpha$, then you write~$+1$ on the
   box. Otherwise you write~$-1$.
 \item Suppose Bob is getting the box of Chocolate Cookies. You roll
   the dice. If the number you roll is less than
-  $100\times\cos^2\beta$, then you write~$+1$ on the box. Otherwise
+  $\cos^2\beta$, then you write~$+1$ on the box. Otherwise
   you write~$-1$.
 \item Suppose, on the other hand, that Bob is getting the box of
   Vanilla Cookies. You roll the dice.  If the number you roll is less
-  than $100\times\sin^2\beta$, then you write~$+1$ on the
+  than $\sin^2\beta$, then you write~$+1$ on the
   box. Otherwise you write~$-1$.
 \item Calculate the correlation coefficient of the numbers written on
   the cookie boxes, as a function of~$\alpha-\beta$.\footnote{The
