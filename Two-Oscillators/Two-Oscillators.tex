@@ -60,13 +60,13 @@
 \startitemize[n]
 \item You have two oscillators,~$a(t)=\sin(\omega t + \phi_a)$
   and~$b(t)=\sin(\omega t+\phi_b)$, where
-\startformula
-  (\phi_a,\phi_b) =
-  \startcases[align={left,left}, distance=1em]
-    \NC(0, \frac{\pi}{2}) \NC{\rm with\ probability\ }\frac{1}{2} \NR
-    \NC(\frac{\pi}{2}, 0) \NC{\rm with\ probability\ }\frac{1}{2} \NR
-  \stopcases
-\stopformula
+  \startformula
+    (\phi_a,\phi_b) =
+    \startcases[align={left,left}, distance=1em]
+      \NC(0, \frac{\pi}{2}) \NC{\rm with\ probability\ }\frac{1}{2} \NR
+      \NC(\frac{\pi}{2}, 0) \NC{\rm with\ probability\ }\frac{1}{2} \NR
+    \stopcases
+  \stopformula
 \item The oscillator outputs are subjected to phase shifts,
   giving~$a'(t)=\sin(\omega t + \phi_a + \theta_a)$
   and~$b'(t)=\sin(\omega t + \phi_b + \theta_b)$.
@@ -74,97 +74,77 @@
   \startformula
     g(x)=
     \startcases[align={left,left}, distance=1em]
-      \NC +1 \NC \NC{\rm with\ probability\ } x^2 \NR
-      \NC -1 \NC \NC{\rm with\ probability\ } 1 - x^2 \NR
+      \NC +1 \NC{\rm with\ probability\ } x^2 \NR
+      \NC -1 \NC{\rm with\ probability\ } 1 - x^2 \NR
     \stopcases
   \stopformula
 \item Calculate the correlation coefficient of~$g(a'(t))$
   and~$g(b'(t))$ as a function of\kern1pt~$\theta_a-\theta_b$.
-
-% \item You have one box of Chocolate Cookies and one box of Vanilla
-%   Cookies.
-% \item You will deliver one of the boxes to Alice and one of the boxes
-%   to Bob. Neither has a preference of flavor.
-% \item You flip a coin to decide who gets which box.\footnote{This step
-%   is equivalent to a light source generating a pair of perpendicularly
-%   polarized photons.}
-% \item Alice has a favorite angle,~$\alpha$. Bob also has a favorite
-%   angle,~$\beta$. You write down the numbers $\cos^2\alpha$,
-%   $\sin^2\alpha$, $\cos^2\beta$, and~$\sin^2\beta$. Also, you have a
-%   pair of ten-sided dice. You can roll these dice to get a number
-%   between~$0.00$ and~$0.99$, inclusive.
-% \item Suppose Alice is getting the box of Chocolate Cookies. You roll
-%   the dice. If the number you roll is less than
-%   $\cos^2\alpha$, then you write~$+1$ on the box. Otherwise
-%   you write~$-1$.\footnote{This is equivalent to a photon being
-%     detected in one of the channels of a polarizing beam splitter.}
-% \item Suppose, on the other hand, that Alice is getting the box of
-%   Vanilla Cookies. You roll the dice.  If the number you roll is less
-%   than $\sin^2\alpha$, then you write~$+1$ on the
-%   box. Otherwise you write~$-1$.
-% \item Suppose Bob is getting the box of Chocolate Cookies. You roll
-%   the dice. If the number you roll is less than
-%   $\cos^2\beta$, then you write~$+1$ on the box. Otherwise
-%   you write~$-1$.
-% \item Suppose, on the other hand, that Bob is getting the box of
-%   Vanilla Cookies. You roll the dice.  If the number you roll is less
-%   than $\sin^2\beta$, then you write~$+1$ on the
-%   box. Otherwise you write~$-1$.
-% \item Calculate the correlation coefficient of the numbers written on
-%   the cookie boxes, as a function of~$\alpha-\beta$.\footnote{The
-%     answer from quantum mechanics is~$-\!\cos\,2(\alpha-\beta)$, and
-%     physicists assure us only quantum mechanical systems can achieve
-%     this solution. According to physicists, even logically equivalent
-%     systems cannot do so, because they have no entangled superposition
-%     states nor action at a distance!}
 \stopitemize
 
 \subject{The Solution}
 
-% First let us solve the problem for $\alpha_0=\alpha-\beta$
-% and~$\beta_0=0$. Then
-% \startformula
-%   \startmathalignment [n=2, align={right,left}]
-%     \NC\cos^2\beta_0\NC= 1 \NR
-%     \NC\sin^2\beta_0\NC= 0 \NR
-%   \stopmathalignment
-% \stopformula
-% which simplifies things. The choice of markings as $\{+1,-1\}$ makes
-% the correlation coefficient even simpler to compute. It is
-% \startformula
-% \rho_0=\rho_0^{++}+\rho_0^{+-}+\rho_0^{-+}+\rho_0^{--}
-% \stopformula
-% where
-% \startformula
-%   \startmathalignment [n=2, align={right,left}]
-%     % The roll for Bob always succeeds for Chocolate, always fails for
-%     % Vanilla.
-%     \NC\rho_0^{++}\NC=\frac{1}{2}(+1)(+1)\sin^2\alpha_0\NR % Vanilla/Choc
-%     \NC\rho_0^{+-}\NC=\frac{1}{2}(+1)(-1)\cos^2\alpha_0\NR % Choc/Vanilla
-%     \NC\rho_0^{-+}\NC=\frac{1}{2}(-1)(+1)\cos^2\alpha_0\NR % Vanilla/Choc
-%     \NC\rho_0^{--}\NC=\frac{1}{2}(-1)(-1)\sin^2\alpha_0\NR % Choc/Vanilla
-%   \stopmathalignment
-% \stopformula
-% Thus (by a double-angle identity found in reference books)
-% \startformula
-%   \rho_0=-(\cos^2\alpha_0-\sin^2\alpha_0)=-\cos\,2\alpha_0
-% \stopformula
-% But~$\alpha_0=\alpha-\beta$, so~$\rho_0$ is the desired
-% solution.\footnote{This solution is the same as the one from quantum
-%   mechanics. But be forewarned: there are many ‘doctors of philosophy’
-%   who would object to my solution yet are permitted to teach
-%   university classes.}  Rename it~$\rho$ without the subscript. The
-% solution is
-% \startformula
-%   \rho=-\cos\,2(\alpha-\beta)
-% \stopformula
-% Interestingly, although the particular ‘scattering’ of~$+1$ and~$-1$
-% marks (were a person to do the operation many times) depends on the
-% specific values of~$\alpha$ and~$\beta$, the correlation coefficient
-% depends only on the difference~$\alpha-\beta$. That is, there exists a
-% relationship between~$+1$ and~$-1$ marks that is invariant under
-% in-unison rotation of the angles.\footnote{Of course, the same rotational
-%   invariance was always true of Bell test experiments, but little
-%   remarked on.}~$\square$
+\startitemize[n]
+\item By change of the time variable and
+  letting~$\theta_{ab}=\theta_a-\theta_b$, one can rewrite~$a'(t)$
+  and~$b'(t)$ as
+  \startformula
+      \NC(\alpha(\tau),\beta(\tau))=
+    \startcases
+      \NC(\sin(\omega\tau + \theta_{ab}), \cos\,\omega\tau)
+      \NC{\rm with\ probability\ }\frac{1}{2} \NR
+      \NC(\cos(\omega\tau + \theta_{ab}), \sin\,\omega\tau)
+      \NC{\rm with\ probability\ }\frac{1}{2} \NR
+    \stopcases
+  \stopformula
+
+\item At $\tau=0$ this gives
+  \startformula
+      \NC(\alpha(0),\beta(0))=
+    \startcases
+      \NC(\sin\theta_{ab}, 1)
+      \NC{\rm with\ probability\ }\frac{1}{2} \NR
+      \NC(\cos\theta_{ab}, 0)
+      \NC{\rm with\ probability\ }\frac{1}{2} \NR
+    \stopcases
+  \stopformula
+
+\item The correlation coefficient for~$\tau=0$, in terms of the
+  difference of angles~$\theta_{ab}$ and~zero,
+  $\theta_{ab}-0=\theta_{ab}$, is
+  \startformula
+    \rho=\rho^{++}+\rho^{+-}+\rho^{-+}+\rho^{--}
+  \stopformula
+  where
+\startformula
+  \startmathalignment [n=2, align={right,left}]
+    \NC\rho^{++}\NC=\frac{1}{2}(+1)(+1)\sin^2\theta_{ab}\NR
+    \NC\rho^{+-}\NC=\frac{1}{2}(+1)(-1)\cos^2\theta_{ab}\NR
+    \NC\rho^{-+}\NC=\frac{1}{2}(-1)(+1)\cos^2\theta_{ab}\NR
+    \NC\rho^{--}\NC=\frac{1}{2}(-1)(-1)\sin^2\theta_{ab}\NR
+  \stopmathalignment
+\stopformula
+
+\item Using a double-angle identity, this simplifies to
+  \startformula
+    \rho=-(\cos^2\theta_{ab}-\sin^2\theta_{ab})=-\cos\,2\theta_{ab}
+  \stopformula
+  or, in other words,
+  \startformula
+    \rho=-\cos\,2(\theta_a-\theta_b)
+  \stopformula
+  which would seem to be the answer to the problem. However, we
+  derived it under the assumption that~$\tau=0$.
+
+\item Note, though, that the solution is invariant under in-unison
+  rotations of\kern1pt~$\theta_a$ and~$\theta_b$. Any change of the
+  time variable is absorbed by such a rotation. Therefore~$\rho$ is
+  indeed the general solution to the problem.\footnote{It is also, as
+    it must be, the correlation coefficient calculated by quantum
+    mechanics for a two-channel optical Bell test experiment. The two
+    problems are equivalent, and all valid methods of solution must
+    come to the same result.}~$\square$
+
+\stopitemize
 
 \stoptext
