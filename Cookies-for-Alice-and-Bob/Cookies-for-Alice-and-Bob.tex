@@ -90,58 +90,69 @@
 \item Calculate the correlation coefficient of the numbers written on
   the cookie boxes, as a function of~$\alpha-\beta$.\footnote{The
     answer from quantum mechanics is~$-\!\cos\,2(\alpha-\beta)$, and
-    physicists assure us only quantum mechanical systems can achieve
-    this solution. According to physicists, even logically equivalent
-    systems cannot do so, because they have no entangled superposition
-    states nor action at a distance!}
+    physicists have assured us that only by traversal of states in a
+    Hilbert space can one derive this answer. Of course, this claim
+    defies the principles of mathematics and is preposterous.}
 \stopitemize
 
 \subject{The Solution}
 
-First let us solve the problem for $\alpha_0=\alpha-\beta$
-and~$\beta_0=0$. Then
-\startformula
-  \startmathalignment [n=2, align={right,left}]
-    \NC\cos^2\beta_0\NC= 1 \NR
-    \NC\sin^2\beta_0\NC= 0 \NR
-  \stopmathalignment
-\stopformula
-which simplifies things. The choice of markings as $\{+1,-1\}$ makes
-the correlation coefficient even simpler to compute. It is
-\startformula
-\rho_0=\rho_0^{++}+\rho_0^{+-}+\rho_0^{-+}+\rho_0^{--}
-\stopformula
-where
-\startformula
-  \startmathalignment [n=2, align={right,left}]
-    % The roll for Bob always succeeds for Chocolate, always fails for
-    % Vanilla.
-    \NC\rho_0^{++}\NC=\frac{1}{2}(+1)(+1)\sin^2\alpha_0\NR % Vanilla/Choc
-    \NC\rho_0^{+-}\NC=\frac{1}{2}(+1)(-1)\cos^2\alpha_0\NR % Choc/Vanilla
-    \NC\rho_0^{-+}\NC=\frac{1}{2}(-1)(+1)\cos^2\alpha_0\NR % Vanilla/Choc
-    \NC\rho_0^{--}\NC=\frac{1}{2}(-1)(-1)\sin^2\alpha_0\NR % Choc/Vanilla
-  \stopmathalignment
-\stopformula
-Thus (by a double-angle identity found in reference books)
-\startformula
-  \rho_0=-(\cos^2\alpha_0-\sin^2\alpha_0)=-\cos\,2\alpha_0
-\stopformula
-But~$\alpha_0=\alpha-\beta$, so~$\rho_0$ is the desired
-solution.\footnote{This solution is the same as the one from quantum
-  mechanics. But be forewarned: there are many ‘doctors of philosophy’
-  who would object to my solution yet are permitted to teach
-  university classes.}  Rename it~$\rho$ without the subscript. The
-solution is
+\startitemize[n]
+\item First let us solve the problem
+  for~$\alpha_0\in(-\infty,+\infty)$ and~$\beta_0=0$. Then
+  \startformula
+    \startmathalignment [n=2, align={right,left}]
+      \NC\cos^2\beta_0\NC= 1 \NR
+      \NC\sin^2\beta_0\NC= 0 \NR
+    \stopmathalignment
+  \stopformula
+  and so the~$\beta_0=0$ setting does nothing except tell us to mark
+  Chocolate Cookies with a~$+1$ and Vanilla Cookies with a~$-1$.
+
+\item Thanks to our choice of markings, the correlation coefficient
+  equals the covariance (that is, there is no need to normalize), and
+  is
+  \startformula
+    \rho=\rho^{++}+\rho^{+-}+\rho^{-+}+\rho^{--}
+  \stopformula
+  where
+  \startformula
+    \startmathalignment [n=2, align={right,left}]
+      % The roll for Bob always succeeds for Chocolate, always fails for
+      % Vanilla.
+      \NC\rho^{++}\NC=\frac{1}{2}(+1)(+1)\sin^2\alpha_0\NR % Vanilla/Choc
+      \NC\rho^{+-}\NC=\frac{1}{2}(+1)(-1)\cos^2\alpha_0\NR % Choc/Vanilla
+      \NC\rho^{-+}\NC=\frac{1}{2}(-1)(+1)\cos^2\alpha_0\NR % Vanilla/Choc
+      \NC\rho^{--}\NC=\frac{1}{2}(-1)(-1)\sin^2\alpha_0\NR % Choc/Vanilla
+    \stopmathalignment
+  \stopformula
+
+\item Thus (by a double-angle identity found in reference books)
+  \startformula
+    \rho=-(\cos^2\alpha_0-\sin^2\alpha_0)=-\cos\,2\alpha_0=-\cos\,2(\alpha_0-\beta_0)
+  \stopformula
+  and~$\rho$ is the solution for the special case~$\alpha_0$
+  and~$\beta_0$.
+
+\item Now set~$\alpha_0=\alpha-\beta$. That
+  makes~$\alpha=\alpha_0+\beta$
+  and~$\beta=\beta_0+\beta$. Add~$\beta-\beta=0$ to~$\alpha_0-\beta_0$
+  in the last expression for~$\rho$ above. This gives
 \startformula
   \rho=-\cos\,2(\alpha-\beta)
 \stopformula
-Interestingly, although the particular ‘scattering’ of~$+1$ and~$-1$
-marks (were a person to do the operation many times) depends on the
-specific values of~$\alpha$ and~$\beta$, the correlation coefficient
-depends only on the difference~$\alpha-\beta$. That is, there exists a
-relationship between~$+1$ and~$-1$ marks that is invariant under
-in-unison rotation of the angles.\footnote{Of course, the same rotational
-  invariance was always true of Bell test experiments, but little
-  remarked on.}~$\square$
+as the general solution.
+
+\item Interestingly, although the particular ‘scattering’ of~$+1$
+  and~$-1$ marks (were a person to do the operation many times)
+  depends on the specific values of~$\alpha$ and~$\beta$, the
+  correlation coefficient depends only on the
+  difference~$\alpha-\beta$. That is, there exists a relationship
+  between~$+1$ and~$-1$ marks that is invariant under in-unison
+  rotation of the angles.\footnote{Of course, the same rotational
+    invariance was always true of Bell test experiments, but must not
+    have been widely noticed, for otherwise Clauser would not have
+    received a Nobel Prize.}~$\square$
+\stopitemize
 
 \stoptext
