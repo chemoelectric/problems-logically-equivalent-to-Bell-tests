@@ -1,0 +1,110 @@
+% -*- mode: ConTeXt; encoding: utf-8; -*-
+%
+% This is free and unencumbered software released into the public domain.
+%
+% Anyone is free to copy, modify, publish, use, compile, sell, or
+% distribute this software, either in source code form or as a compiled
+% binary, for any purpose, commercial or non-commercial, and by any
+% means.
+%
+% In jurisdictions that recognize copyright laws, the author or authors
+% of this software dedicate any and all copyright interest in the
+% software to the public domain. We make this dedication for the benefit
+% of the public at large and to the detriment of our heirs and
+% successors. We intend this dedication to be an overt act of
+% relinquishment in perpetuity of all present and future rights to this
+% software under copyright law.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+% IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+% OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+% ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+% OTHER DEALINGS IN THE SOFTWARE.
+
+\enableregime[utf]
+\frenchspacing
+\mainlanguage[en]
+
+\setupbodyfont[schoolbook, 11pt]
+\setupbodyfontenvironment[default][em=italic]
+
+\setuppapersize[letter][letter]
+
+\setuplayout
+  [location=singlesided,
+    width=fit,
+    backspace=1.25in]
+
+\setuppagenumbering
+  [alternative=singlesided,
+    location={footer, middle},
+    way=bytext]
+
+\setuphead
+  [title]
+  [align=middle]
+\setuphead
+  [subject]
+  [align=middle,
+    commandbefore={---\hskip0.6em},
+    commandafter={\hskip0.5em---}]
+
+\starttext
+
+\title{Stern-Gerlach Shutters}
+
+\subject{The Problem}
+
+\startitemize[n]
+
+\item The Stern-Gerlach Scientific Contraption Company makes a device
+  called a Stern-Gerlach Shutter. One of these is depicted
+  in~\in{Figure}[fig:shutter].
+
+\placefigure[][fig:shutter]{Stern-Gerlach Shutter}{\externalfigure[Stern-Gerlach-Shutter-2.png][width=2.25in]}
+
+\item The settings gauge at the bottom of the device is set at a
+  desired angle between zero and~$\pi$. The shutter sheet slides
+  horizontally, guided by a long bar that is connected to the rotating
+  handle, and which can slide vertically through a tube at the left
+  edge of the shutter sheet.
+
+\item The shutter sheet is used to cover a rectangular opening that is
+  centered over the settings gauge’s pivot. The width of the opening
+  is equal to the diameter of the semicircle swept out by the settings
+  gauge.
+
+\item We have two of these Stern-Gerlach Shutters, and for each one a
+  corresponding Stern-Gerlach Shutter Shooter. A Stern-Gerlach Shutter
+  Shooter fires a pellet at a random point inside the boundaries of
+  the opening of a Stern-Gerlach Shutter. The pellet may either pass
+  through the opening or bounce off the shutter sheet. The Shutter
+  Shooter may fire either a black pellet or a white pellet, at the
+  discretion of the experimenter.
+
+\item Shutter~1 is set to~$\phi_1$ and~Shutter~2 is set to~$\phi_2$.
+
+\item According to the flip of a fair coin, we shoot either a black
+  pellet at~Shutter~1 and a white pellet at~Shutter~2, or the other
+  way around.
+
+\item Let~$+1$ represent either a black pellet passing through an
+  opening or a white pellet bouncing off a shutter sheet. Let~$-1$
+  represent pellets doing it the other way around.
+
+\item Compute, for the two Stern-Gerlach shutters, the correlation
+  coefficient~$\rho$ as a function of~$\phi_1-\phi_2$.
+
+\stopitemize
+
+\subject{The Solution}
+
+\in{Figure}[fig:shutterannot]
+
+\startitemize[n]
+\placefigure[][fig:shutterannot]{Dimensions of a Stern-Gerlach Shutter}{\externalfigure[Stern-Gerlach-Shutter-annotated-2.png][width=2.35in]}
+\stopitemize
+
+\stoptext
