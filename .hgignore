@@ -10,3 +10,4 @@ syntax: regexp
 
 # Other files.
 -tmp-[0-9]+\.png$
+^.*/install-to-website\.zsh$
