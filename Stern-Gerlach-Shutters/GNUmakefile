@@ -24,7 +24,7 @@
 .DELETE_ON_ERROR:
 
 MY-DOC = Stern-Gerlach-Shutters
-PAGES = #0 1
+#PAGES = 0 1 2 3
 
 CONTEXT = context
 CONTEXTFLAGS =
@@ -35,14 +35,14 @@ CONVERTFLAGS =
 %.pdf: %.tex
 	$(CONTEXT) $(CONTEXTFLAGS) $(<)
 
-.PHONY: default pdf png
-default: pdf png
+.PHONY: default pdf # png
+default: pdf # png
 pdf: $(MY-DOC).pdf
-png: $(MY-DOC).pdf
-	$(CONVERT) $(CONVERTFLAGS) $(MY-DOC).pdf $(MY-DOC)-tmp.png
-	for i in $(PAGES); do \
-		$(CONVERT) $(CONVERTFLAGS) -flatten $(MY-DOC)-tmp-"$${i}".png $(MY-DOC)-"$${i}".png; \
-	done
-	for i in $(PAGES); do \
-		rm -f $(MY-DOC)-tmp-"$${i}".png; \
-	done
+# png: $(MY-DOC).pdf
+# 	$(CONVERT) $(CONVERTFLAGS) $(MY-DOC).pdf $(MY-DOC)-tmp.png
+# 	for i in $(PAGES); do \
+# 		$(CONVERT) $(CONVERTFLAGS) -flatten $(MY-DOC)-tmp-"$${i}".png $(MY-DOC)-"$${i}".png; \
+# 	done
+# 	for i in $(PAGES); do \
+# 		rm -f $(MY-DOC)-tmp-"$${i}".png; \
+# 	done

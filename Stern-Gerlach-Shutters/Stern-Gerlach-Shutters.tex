@@ -63,7 +63,7 @@
   called a Stern-Gerlach Shutter. One of these is depicted
   in~\in{Figure}[fig:shutter].
 
-\placefigure[][fig:shutter]{Stern-Gerlach Shutter}{\externalfigure[Stern-Gerlach-Shutter-2.png][width=2.25in]}
+  \placefigure[][fig:shutter]{Stern-Gerlach Shutter}{\externalfigure[Stern-Gerlach-Shutter-2.png][width=2.25in]}
 
 \item The settings gauge at the bottom of the device is set at a
   desired angle between zero and~$\pi$. The shutter sheet slides
@@ -99,12 +99,83 @@
 
 \stopitemize
 
+\page
+
 \subject{The Solution}
 
-\in{Figure}[fig:shutterannot]
-
 \startitemize[n]
-\placefigure[][fig:shutterannot]{Dimensions of a Stern-Gerlach Shutter}{\externalfigure[Stern-Gerlach-Shutter-annotated-2.png][width=2.35in]}
+
+\item \in{Figure}[fig:shutterannot] depicts important dimensions of a
+  Stern-Gerlach Shutter.
+
+  \placefigure[][fig:shutterannot]{Dimensions of a Stern-Gerlach
+    Shutter}{\externalfigure[Stern-Gerlach-Shutter-annotated-2.png][width=2.35in]}
+
+\item For convenience, let the radius of the settings gauge equal
+  one. Therefore the diameter equals two and the width of the opening
+  is also two.
+
+\item Refer to the setting gauge’s setting as~$\phi$. The projection
+  of the gauge onto horizontal is~$\cos\phi$.
+
+\item By double-angle identities in the {\it CRC Handbook of
+  Mathematical Sciences},
+  \startformula
+    \cos\phi=\cos^2(\phi/2)-\sin^2(\phi/2)=2\cos^2(\phi/2)-1=1-2\sin^2(\phi/2)
+  \stopformula
+
+\item As shown in~\in{Figure}[fig:shutterannot], these identities
+  imply the shutter sheet divides the width of the opening
+  into~$2\cos^2(\phi/2)$ and~$2\sin^2(\phi/2)$.
+
+\item Thus the shutter sheet divides the area of the opening into
+  proportions~$\cos^2(\phi/2)$ and~$\sin^2(\phi/2)$.
+
+\item The probability of a pellet passing through the opening is
+  therefore~$\cos^2(\phi/2)$, and the probability of it bouncing off
+  the shutter sheet is~$\sin^2(\phi/2)$.
+
+\item Let us solve for the case~$\phi_1=\phi_{01}\in[0,\pi]$,
+  $\phi_2=\phi_{02}=0$. Shutter~2 is fully open, so one merely counts
+  black pellets as~$+1$ and white pellets as~$-1$. It is as if there
+  were no shutter at all, and in fact one need not bother shooting
+  at~Shutter~2.
+
+\item For this special case,
+  \startformula
+    \rho=\rho^{++}+\rho^{+-}+\rho^{-+}+\rho^{--}
+  \stopformula
+  where
+  \startformula
+    \startmathalignment [n=2, align={right,left}]
+      \NC\rho^{++}\NC=\frac{1}{2}(+1)(+1)\sin^2(\phi_{01}/2)\NR
+      \NC\rho^{+-}\NC=\frac{1}{2}(+1)(-1)\cos^2(\phi_{01}/2)\NR
+      \NC\rho^{-+}\NC=\frac{1}{2}(-1)(+1)\cos^2(\phi_{01}/2)\NR
+      \NC\rho^{--}\NC=\frac{1}{2}(-1)(-1)\sin^2(\phi_{01}/2)\NR
+    \stopmathalignment
+  \stopformula
+
+\item Using the double-angle identities again, this simplifies to
+  \startformula
+    \rho = -(\cos^2\frac{\phi_{01}}{2}-\sin^2\frac{\phi_{01}}{2})
+    =-\cos\phi_{01}=-\cos(\phi_{01}-\phi_{02})
+  \stopformula
+
+\item Suppose one is given~$\phi_1$ and~$\phi_2$ as the respective
+  settings. Then let~$\phi_{01}=\phi_1-\phi_2$
+  and~$\phi_{02}=\phi_2-\phi_2=0$, and add~$\phi_2$ to both sides of
+  the minus sign in~$\phi_{01}-\phi_{02}$.
+  \startformula
+    \startmathalignment [n=2, align={right,left}]
+      \NC\rho\NC=-\cos(\phi_{01}-\phi_{02}) \NR
+      \NC    \NC=-\cos\{(\phi_1-\phi_2)-(\phi_2-\phi_2)\} \NR
+      \NC    \NC=-\cos(\phi_1-\phi_2) \NR
+    \stopmathalignment
+  \stopformula
+
+\item And there we have it, the general solution:
+  $\rho = -\cos(\phi_1-\phi_2)$.
+
 \stopitemize
 
 \stoptext
