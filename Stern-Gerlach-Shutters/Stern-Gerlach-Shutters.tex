@@ -25,8 +25,6 @@
 
 \define\eblack{{{\rm e}^{\rm b}}}
 \define\ewhite{{{\rm e}^{\rm w}}}
-\define\ebew{{(\eblack,\ewhite)}}
-\define\eweb{{(\ewhite,\eblack)}}
 
 \definemathmatrix
   [pmatrix]
@@ -239,23 +237,22 @@
   This constraint is like a convex combination (such as one
   encounters, for instance, in de Casteljau’s algorithm), except with
   squares of absolute values instead of the multipliers
-  themselves.\footnote{The constraint opaquely relates quantum
-    mechanics to probability theory, in which the probabilities of
-    mutually exclusive propositions are nonnegative real numbers that
-    must add up to one. Multiplying a vector’s multiplier by its
-    complex conjugate gives what likely, in a different approach to
-    the same problem, would be stated as the probability of some event
-    occurring. Thus ‘superposition’ implies that there is referenced,
-    within all the bewildering notations, some mutually exclusive but
-    complete set of possible events. (What many have inferred instead
-    from it belongs more properly to psychiatry than to physics.)}
+  themselves.
+% \footnote{The constraint opaquely relates quantum
+%     mechanics to probability theory, in which the probabilities of
+%     mutually exclusive propositions are nonnegative real numbers that
+%     must add up to one. Multiplying a vector’s multiplier by its
+%     complex conjugate gives what likely, in a different approach to
+%     the same problem, would be stated as the probability of some event
+%     occurring. Thus ‘superposition’ implies that there is referenced,
+%     within all the bewildering notations, some mutually exclusive but
+%     complete set of possible events. (What many have inferred instead
+%     from it belongs more properly to psychiatry than to physics.)}
 
-\item The full linear space will have as basis ordered pairs of the
-  form~$\ebew$ or~$\eweb$.\footnote{This space is a subspace of the
-    tensor product of the spaces for~Pellet~1 and~Pellet~2. Dirac
-    notation obscures that this is just a linear space with an obvious
-    set of ordered pairs as basis.}  It also is subject to the
-  ‘superposition’ constraint.
+\item The full linear space will comprise ordered pairs of the
+  form~$(\alpha_1\eblack+\alpha_2\ewhite,\beta_1\eblack+\beta_2\ewhite)$,
+  where~$|\alpha_1|^2+|\alpha_2|^2=|\beta_1|^2+|\beta_2|^2=|\alpha_1|^2+|\beta_1|^2=|\alpha_2|^2+|\beta_2|^2=1$.\footnote{Hint:
+    the squares are {\it probabilities}.}
 
 \item Now let us make it clear that the state space represents {\it
   the state of a calculation}, and {\it not\/} the physical state of
@@ -266,20 +263,28 @@
     etc., although physicists have not realized this. Conservation
     laws, not ‘superposition’, account for particles occurring in
     pairs.} Nevertheless, the result of the flip of the fair coin will
-  be the superposition~$e^{i\pi/4}\ebew+e^{i\pi/4}\eweb$. We might
-  have used~$\sqrt{1/2}$ instead of~$e^{i\pi/4}$, but complex number
-  multipliers let us more easily represent what a Stern-Gerlach
-  Shutter does.
+  be the
+  % superposition~$\ebew{e^{i\pi/4}}{e^{i\pi/4}}+\eweb{e^{i\pi/4}}{e^{i\pi/4}}$. We
+  % might have used~$\sqrt{1/2}$ instead of~$e^{i\pi/4}$, but complex
+  % number multipliers let us more easily represent what a Stern-Gerlach
+  % Shutter does.
 
 \item Actually, hardly anyone one knows what a Stern-Gerlach Shutter
   does ‘quantum mechanically’, except the wizards at the Stern-Gerlach
   company. They inform us that a Stern-Gerlach Shutter set to~$\phi$
   multiplies~$\eblack$ by~$e^{i\phi/2}$ and~$\ewhite$
-  by~$e^{-i\phi/2}$.\footnote{One can deduce these operations from the
-    known solution that was obtained more sensibly. Now deduce the
-    other way: a Stern-Gerlach magnet is a kind of shutter or valve,
-    whose effective areas are squares of sinusoids. Problems involving
-    Stern-Gerlach magnets can be solved without quantum mechanics.}
+  by~$e^{-i\phi/2}$.\footnote{One can deduce these operations from
+    intermediate results of the earlier solution. Now deduce the other
+    way: a Stern-Gerlach magnet is a kind of shutter or valve, whose
+    effective areas are squares of sinusoids. Therefore problems
+    involving Stern-Gerlach magnets can be solved without quantum
+    mechanics.}
+
+% \item Thus the new state of the calculation, taking into account the
+%   shutters, is the superposition
+%   \startformula
+%     e^{i3\pi/4}\ebew
+%   \stopformula
 
 \item TO BE WRITTEN.~$\square$
 
