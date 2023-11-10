@@ -23,6 +23,9 @@
 % ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 % OTHER DEALINGS IN THE SOFTWARE.
 
+\define\eblack{{e^{\rm b}}}
+\define\ewhite{{e^{\rm w}}}
+
 \enableregime[utf]
 \frenchspacing
 \mainlanguage[en]
@@ -184,7 +187,64 @@
 
 \item And there we have it, the general solution:
   $\rho = -\cos(\phi_1-\phi_2)$. It is invariant under in-unison
-  rotations of the settings.~$\square$
+  rotations of the settings.
+
+\stopitemize
+
+
+\page
+
+\subject{Alternative Solution by Quantum Mechanics}
+
+\startitemize[n]
+
+\item A solution by quantum mechanics is much more complicated, so no
+  wonder quantum mechanics is considered arcane and difficult. Because
+  all mathematical methods\footnote{{\it When employed correctly\/}!}
+  must reach the same result, quantum mechanics is never necessary to
+  solve a problem. Thus one might consider not using it.
+
+\item Nevertheless, let us use it here. I have not had coursework in
+  quantum mechanics and so will try to figure this out for
+  myself. Otherwise, one may look up an analysis of the EPR-Bohm
+  problem for Stern-Gerlach magnets. A similar analysis ought to apply
+  to Stern-Gerlach Shutters. Beware I do not intend to use notations
+  conventional in physics.
+
+\item Possible states of our calculation will be represented as a
+  linear space. We attribute no physical meaning to this space. The
+  points in the space represent states in a symbolic calculation of
+  the correlation coefficient.
+
+\item Either of the two pellets has its own smaller linear
+  space. Let~$\eblack$ represent the basis vector for a black pellet
+  and~$\ewhite$ the basis vector for a white pellet. Then these
+  vectors form a linear space. So-called ‘superpositions’ can be
+  formed from linear combinations of the two basis vectors.
+
+\item However, for them to be ‘superpositions’, there is a constraint
+  on these linear combinations. The scalar multipliers of the
+  components may be real or complex numbers, but the sums of the
+  squares of the absolute values of those multipliers must equal one.
+  This constraint is like a convex combination (such as one
+  encounters, for instance, in de Casteljau’s algorithm), except with
+  squares of absolute values instead of the multipliers
+  themselves.\footnote{The constraint opaquely relates quantum
+    mechanics to probability theory, in which the probabilities of
+    mutually exclusive propositions are nonnegative real numbers that
+    must add up to one. Multiplying a vector’s multiplier by its
+    complex conjugate gives what likely, in a different approach to
+    the same problem, would be stated as the probability of some event
+    occurring. Thus ‘superposition’ implies that there is referenced,
+    within all the bewildering notations, some mutually exclusive but
+    complete set of possible events. (What many have inferred instead
+    from it belongs more properly to psychiatry than to physics.)}
+
+\item The full linear space will have as basis ordered pairs of the
+  form~$(\eblack,\ewhite)$ or~$(\ewhite,\eblack)$. It also is subject
+  to the ‘superposition’ constraint.
+
+\item TO BE WRITTEN.~$\square$
 
 \stopitemize
 
