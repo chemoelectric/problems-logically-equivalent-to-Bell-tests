@@ -25,13 +25,8 @@
 
 \define\eblack{{{\rm e}^{\rm b}}}
 \define\ewhite{{{\rm e}^{\rm w}}}
-
-\definemathmatrix
-  [pmatrix]
-  [matrix:parentheses]
-  [simplecommand=pmatrix]
-
-\def\coltwo#1#2{{\startpmatrix\NC#1\NR\NC#2\NR\stoppmatrix}}
+\define\ebew{{(\eblack,\ewhite)}}
+\define\eweb{{(\ewhite,\eblack)}}
 
 \enableregime[utf]
 \frenchspacing
@@ -215,78 +210,56 @@
   quantum mechanics and so will try to figure this out for
   myself. Otherwise, one may look up an analysis of the EPR-Bohm
   problem for Stern-Gerlach magnets. A similar analysis ought to apply
-  to Stern-Gerlach Shutters. Beware I do not intend to use notations
-  conventional in physics.
+  to Stern-Gerlach Shutters.
 
-\item Possible states of our calculation will be represented as a
-  linear space. We attribute no physical meaning to this space. The
-  points in the space represent states in a symbolic calculation of
-  the correlation coefficient.
+\item Possible states of our calculation will form a linear space of
+  ordered pairs of vectors. We attribute no physical meaning to this
+  space. The ordered pairs in the space represent states in a symbolic
+  calculation of the correlation coefficient.
 
 \item Either of the two pellets has its own linear space that is more
   primitive than the ‘full’ linear space. Let~$\eblack$ represent the
   basis vector for a black pellet and~$\ewhite$ the basis vector for a
-  white pellet. Then these vectors form a linear space. So-called
+  white pellet. These vectors induce a linear space. So-called
   ‘superpositions’ can be formed from linear combinations of the two
   basis vectors.
 
-\item However, for them to be ‘superpositions’, there is a constraint
-  on these linear combinations. The scalar multipliers of the
+\item However, for a linear combination to be a valid ‘superposition’,
+  there is a constraint on it.  The scalar multipliers of the
   components may be real or complex numbers, but the sums of the
   squares of the absolute values of those multipliers must equal one.
-  This constraint is like a convex combination (such as one
-  encounters, for instance, in de Casteljau’s algorithm), except with
-  squares of absolute values instead of the multipliers
-  themselves.
-% \footnote{The constraint opaquely relates quantum
-%     mechanics to probability theory, in which the probabilities of
-%     mutually exclusive propositions are nonnegative real numbers that
-%     must add up to one. Multiplying a vector’s multiplier by its
-%     complex conjugate gives what likely, in a different approach to
-%     the same problem, would be stated as the probability of some event
-%     occurring. Thus ‘superposition’ implies that there is referenced,
-%     within all the bewildering notations, some mutually exclusive but
-%     complete set of possible events. (What many have inferred instead
-%     from it belongs more properly to psychiatry than to physics.)}
 
-\item The full linear space will comprise ordered pairs of the
-  form~$(\alpha_1\eblack+\alpha_2\ewhite,\beta_1\eblack+\beta_2\ewhite)$,
-  where~$|\alpha_1|^2+|\alpha_2|^2=|\beta_1|^2+|\beta_2|^2=|\alpha_1|^2+|\beta_1|^2=|\alpha_2|^2+|\beta_2|^2=1$.\footnote{Hint:
-    the squares are {\it probabilities}.}
-
-\item Now let us make it clear that the state space represents {\it
-  the state of a calculation}, and {\it not\/} the physical state of
-  the experiment. There is no constraint on the shooting of~Pellet~1
+\item Now, let us clarify that the state space represents {\it the
+  state of a calculation}, and {\it not\/} the physical state of the
+  experiment. There is no constraint on the shooting of~Pellet~1
   and~Pellet~2 being done simultaneously. If a settings gauge be set
   at zero, no shooting is necessary at all.\footnote{Similar
     observations are true of experiments with photons, electrons,
     etc., although physicists have not realized this. Conservation
     laws, not ‘superposition’, account for particles occurring in
     pairs.} Nevertheless, the result of the flip of the fair coin will
-  be the
-  % superposition~$\ebew{e^{i\pi/4}}{e^{i\pi/4}}+\eweb{e^{i\pi/4}}{e^{i\pi/4}}$. We
-  % might have used~$\sqrt{1/2}$ instead of~$e^{i\pi/4}$, but complex
-  % number multipliers let us more easily represent what a Stern-Gerlach
-  % Shutter does.
+  be the superposition~$e^{i\pi/4}\ebew+e^{i\pi/4}\eweb$. We
 
-\item Actually, hardly anyone one knows what a Stern-Gerlach Shutter
-  does ‘quantum mechanically’, except the wizards at the Stern-Gerlach
-  company. They inform us that a Stern-Gerlach Shutter set to~$\phi$
-  multiplies~$\eblack$ by~$e^{i\phi/2}$ and~$\ewhite$
-  by~$e^{-i\phi/2}$.\footnote{One can deduce these operations from
-    intermediate results of the earlier solution. Now deduce the other
-    way: a Stern-Gerlach magnet is a kind of shutter or valve, whose
-    effective areas are squares of sinusoids. Therefore problems
-    involving Stern-Gerlach magnets can be solved without quantum
-    mechanics.}
+% \item Actually, hardly anyone one knows what a Stern-Gerlach Shutter
+%   does ‘quantum mechanically’, except the wizards at the Stern-Gerlach
+%   company. They inform us that a Stern-Gerlach Shutter set to~$\phi$
+%   multiplies~$\eblack$ by~$e^{+i\phi/2}$ and~$\ewhite$
+%   by~$e^{-i\phi/2}$. Call this operation the ‘phase shift’. Then the
+%   pellet passes through the opening with probability equal to the
+%   square of the projection of the new vector onto the basis
+%   vector.\footnote{One can deduce these operations from intermediate
+%     results of the earlier solution. Now deduce the other way: a
+%     Stern-Gerlach magnet is a kind of shutter or valve, whose
+%     effective area is the square of a cosine or sine. Therefore
+%     problems involving Stern-Gerlach magnets and ‘spin’ can be solved
+%     without quantum mechanics---that is, without
+%     ‘superpositions’. There is no ‘entanglement’. There is no ‘action
+%     at a distance’. Superpositions are not a property of the problem,
+%     but of the method of solution---and it is impossible for a method
+%     of solution to be mandatory except by authoritarian fiat.}
 
-% \item Thus the new state of the calculation, taking into account the
-%   shutters, is the superposition
-%   \startformula
-%     e^{i3\pi/4}\ebew
-%   \stopformula
-
-\item TO BE WRITTEN.~$\square$
+\item NOPE. I DON’T KNOW HOW TO DO THIS, AND IT IS IMMENSELY
+  COMPLICATED. I GIVE UP.~$\square$
 
 \stopitemize
 
