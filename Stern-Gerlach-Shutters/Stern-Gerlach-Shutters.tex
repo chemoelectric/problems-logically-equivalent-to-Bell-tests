@@ -23,8 +23,17 @@
 % ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 % OTHER DEALINGS IN THE SOFTWARE.
 
-\define\eblack{{e^{\rm b}}}
-\define\ewhite{{e^{\rm w}}}
+\define\eblack{{{\rm e}^{\rm b}}}
+\define\ewhite{{{\rm e}^{\rm w}}}
+\define\ebew{{(\eblack,\ewhite)}}
+\define\eweb{{(\ewhite,\eblack)}}
+
+\definemathmatrix
+  [pmatrix]
+  [matrix:parentheses]
+  [simplecommand=pmatrix]
+
+\def\coltwo#1#2{{\startpmatrix\NC#1\NR\NC#2\NR\stoppmatrix}}
 
 \enableregime[utf]
 \frenchspacing
@@ -216,11 +225,12 @@
   points in the space represent states in a symbolic calculation of
   the correlation coefficient.
 
-\item Either of the two pellets has its own smaller linear
-  space. Let~$\eblack$ represent the basis vector for a black pellet
-  and~$\ewhite$ the basis vector for a white pellet. Then these
-  vectors form a linear space. So-called ‘superpositions’ can be
-  formed from linear combinations of the two basis vectors.
+\item Either of the two pellets has its own linear space that is more
+  primitive than the ‘full’ linear space. Let~$\eblack$ represent the
+  basis vector for a black pellet and~$\ewhite$ the basis vector for a
+  white pellet. Then these vectors form a linear space. So-called
+  ‘superpositions’ can be formed from linear combinations of the two
+  basis vectors.
 
 \item However, for them to be ‘superpositions’, there is a constraint
   on these linear combinations. The scalar multipliers of the
@@ -241,8 +251,35 @@
     from it belongs more properly to psychiatry than to physics.)}
 
 \item The full linear space will have as basis ordered pairs of the
-  form~$(\eblack,\ewhite)$ or~$(\ewhite,\eblack)$. It also is subject
-  to the ‘superposition’ constraint.
+  form~$\ebew$ or~$\eweb$.\footnote{This space is a subspace of the
+    tensor product of the spaces for~Pellet~1 and~Pellet~2. Dirac
+    notation obscures that this is just a linear space with an obvious
+    set of ordered pairs as basis.}  It also is subject to the
+  ‘superposition’ constraint.
+
+\item Now let us make it clear that the state space represents {\it
+  the state of a calculation}, and {\it not\/} the physical state of
+  the experiment. There is no constraint on the shooting of~Pellet~1
+  and~Pellet~2 being done simultaneously. If a settings gauge be set
+  at zero, no shooting is necessary at all.\footnote{Similar
+    observations are true of experiments with photons, electrons,
+    etc., although physicists have not realized this. Conservation
+    laws, not ‘superposition’, account for particles occurring in
+    pairs.} Nevertheless, the result of the flip of the fair coin will
+  be the superposition~$e^{i\pi/4}\ebew+e^{i\pi/4}\eweb$. We might
+  have used~$\sqrt{1/2}$ instead of~$e^{i\pi/4}$, but complex number
+  multipliers let us more easily represent what a Stern-Gerlach
+  Shutter does.
+
+\item Actually, hardly anyone one knows what a Stern-Gerlach Shutter
+  does ‘quantum mechanically’, except the wizards at the Stern-Gerlach
+  company. They inform us that a Stern-Gerlach Shutter set to~$\phi$
+  multiplies~$\eblack$ by~$e^{i\phi/2}$ and~$\ewhite$
+  by~$e^{-i\phi/2}$.\footnote{One can deduce these operations from the
+    known solution that was obtained more sensibly. Now deduce the
+    other way: a Stern-Gerlach magnet is a kind of shutter or valve,
+    whose effective areas are squares of sinusoids. Problems involving
+    Stern-Gerlach magnets can be solved without quantum mechanics.}
 
 \item TO BE WRITTEN.~$\square$
 
