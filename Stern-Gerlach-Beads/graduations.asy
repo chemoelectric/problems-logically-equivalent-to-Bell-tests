@@ -30,7 +30,7 @@
 
 real box_width = 5.9;           /* Change this to fit your box. */
 
-defaultpen(linewidth(2bp));
+defaultpen(linewidth(0.8bp));
 
 real bigpt = 1/72;
 real width = 8.5;               /* For U.S. letter. */
@@ -42,17 +42,19 @@ draw((0,0)--(0,height/bigpt));
 draw((width/bigpt,0)--(width/bigpt,height/bigpt));
 draw((0,height/bigpt)--(width/bigpt,height/bigpt));
 
-real[] deg = { 0.0, 22.5, 45.0, 67.5, 90.0, 112.5, 135.0, 157.5, 180.0 };
-for (real d : deg)
+for (real d = 0.0; d <= 180.0; d += 10.0)
   {
     real theta = (pi/180) * d;
     real x = (width - (width - diameter)/2 - diameter * (sin (theta / 2) ** 2)) / bigpt;
     draw((x, 1/bigpt)--(x, (height - 1)/bigpt));
-    if (d != 0.0 && d != 180.0)
+    for (real y = 1/bigpt; y <= (height - 1)/bigpt; y += 1.2/bigpt)
       {
-        if (d < 90.0)
-          label("$" + (string) d + "$", (x, height/(2*bigpt)), left);
-        else
-          label("$" + (string) d + "$", (x, height/(2*bigpt)), right);
+        if (30.0 <= d && d <= 150.0)
+          {
+            if (d < 90.0)
+              label("{\footnotesize$" + (string) d + "\kern-2pt$}", (x, y), left);
+            else
+              label("{\footnotesize$\kern-2pt" + (string) d + "$}", (x, y), right);
+          }
       }
   }
