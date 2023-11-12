@@ -40,3 +40,7 @@ pdf: $(MY-DOC).pdf
 
 graduations.pdf: graduations.asy
 	$(ASY) $(ASYFLAGS) $(<)
+
+.PHONY: clean
+clean:
+	-rm -f graduations.pdf
