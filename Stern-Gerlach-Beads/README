@@ -1,0 +1,12 @@
+This directory will contain description and analysis of the
+Stern-Gerlach Beads, an actual apparatus I have made.
+
+It is a box that you shake to distribute black and white beads
+randomly on two sides of a divider that is set according to the angle
+of a Stern-Gerlach magnet. The statistics will agree with the quantum
+mechanics for an EPR-Bohm experiment with a Stern-Gerlach magnet.
+
+The pairing of particles is, in fact, arbitrary (regardless of the
+‘superposition’ that is employed in state space analysis). Thus
+shaking the Stern-Gerlach Beads with different settings of the
+separator can be done to duplicate the Bell test.
